@@ -55,7 +55,7 @@ if btn:
                     for j in range(0,len(dict[0]["meanings"][i]['definitions'])):
                         if("example" not in dict[0]["meanings"][i]['definitions'][j]):
                             # If it does not contain example then use this
-                            st.write(f"<li style='font-size:20px;'>{dict[0]["meanings"][i]["definitions"][j]["definition"]}</li>",unsafe_allow_html=True)
+                            st.write(f"<li style='font-size:20px;'>{dict[0]['meanings'][i]['definitions'][j]['definition']}</li>", unsafe_allow_html=True)
                         else:
                             # If it contains example then use this 
                             st.write(f"<li style='font-size:20px;'>{dict[0]["meanings"][i]["definitions"][j]["definition"]} For Example: {dict[0]["meanings"][i]["definitions"][j]["example"]}</li>",unsafe_allow_html=True)
