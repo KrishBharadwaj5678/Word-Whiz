@@ -43,22 +43,22 @@ if btn:
         parts_of_speech=[]
         # Getting all parts of speech
         for i in range(0,len(dict[0]["meanings"])):
-            if(dict[0]["meanings"][i]['partOfSpeech'] is ""):
+            if(dict[0]["meanings"][i]["partOfSpeech"] is ""):
                 continue
             elif(len(dict[0]["meanings"][i]['partOfSpeech'])>=2):
                 # checking that the parts of speech should not duplicate
                 if(dict[0]["meanings"][i]['partOfSpeech'] not in parts_of_speech):
                     # Showing parts of speech separetly
-                    st.write(f'<h4><span style=color:#1fa2ff;>{dict[0]["meanings"][i]['partOfSpeech']}:</span></h4>',unsafe_allow_html=True)
+                    st.write(f'<h4><span style=color:#1fa2ff;>{dict[0]["meanings"][i]["partOfSpeech"]}:</span></h4>',unsafe_allow_html=True)
                     parts_of_speech.append(dict[0]["meanings"][i]['partOfSpeech'])
                     # Iterating each parts of speech
                     for j in range(0,len(dict[0]["meanings"][i]['definitions'])):
                         if("example" not in dict[0]["meanings"][i]['definitions'][j]):
                             # If it does not contain example then use this
-                            st.write(f"<li style='font-size:20px;'>{dict[0]["meanings"][i]['definitions'][j]["definition"]}</li>",unsafe_allow_html=True)
+                            st.write(f"<li style='font-size:20px;'>{dict[0]["meanings"][i]["definitions"][j]["definition"]}</li>",unsafe_allow_html=True)
                         else:
                             # If it contains example then use this 
-                            st.write(f"<li style='font-size:20px;'>{dict[0]["meanings"][i]['definitions'][j]["definition"]} For Example: {dict[0]["meanings"][i]['definitions'][j]["example"]}</li>",unsafe_allow_html=True)
+                            st.write(f"<li style='font-size:20px;'>{dict[0]["meanings"][i]["definitions"][j]["definition"]} For Example: {dict[0]["meanings"][i]["definitions"][j]["example"]}</li>",unsafe_allow_html=True)
 
         synonyms=[]
         antonyms=[]
