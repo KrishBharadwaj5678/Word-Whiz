@@ -47,7 +47,7 @@ if btn:
                 # checking that the parts of speech should not duplicate
                 if(dict[0]["meanings"][i]['partOfSpeech'] not in parts_of_speech):
                     # Showing parts of speech separetly
-                    st.write(f'<h4><span style=color:#1fa2ff;>{dict[0]["meanings"][i]["partOfSpeech"]}:</span></h4>',unsafe_allow_html=True)
+                    st.write(f'<h4><span style=color:#1fa2ff;>{dict[0]["meanings"][i]["partOfSpeech"].title()}:</span></h4>',unsafe_allow_html=True)
                     parts_of_speech.append(dict[0]["meanings"][i]['partOfSpeech'])
                     # Iterating each parts of speech
                     for j in range(0,len(dict[0]["meanings"][i]['definitions'])):
