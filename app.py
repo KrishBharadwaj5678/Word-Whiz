@@ -10,9 +10,7 @@ st.set_page_config(
 )
 
 st.write("<h2 style='color:#ff6a00;'>Unraveling the Secrets of Words</h2>",unsafe_allow_html=True)
-
 word=st.text_input("Type a Word")
-
 btn=st.button("Search")
 
 if btn:
