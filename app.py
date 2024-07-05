@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 st.set_page_config(
-    page_title="WordWhiz",
+    page_title="Word Whiz",
     page_icon="logo.png",
     menu_items={
         "About":"""Elevate your language skills with WordWhiz! Our comprehensive online dictionary provides detailed parts of speech, synonyms, antonyms, and example sentences to help you master every word. Perfect for students, writers, and language lovers. Start your word journey with WordWhiz today!"""
